@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set TimeOut</title>
+</head>
+<body>
+    <div>
+        <h1 id="timer">Han pasado 0 segundos</h1>
+        <button id="btnParar"></button>
+    </div>
+    <script>
+        // setTimeout(() => {
+        //     console.log(`Ha pasado en 5 segundos`);
+        // }, 5000);
+    
+        //  setTimeout(() => {
+        //     document.write(`Han pasado 5 segundos`)
+        //  } , 5000);
+            var btnParar = document.getElementById('btnParar');
+            const timer = document.getElementById('timer');
+            let c = 0;
+            setInterval(() => {
+                c++;
+                let msg = (c === 1) ? `Han pasado ${c} segundo.` : `Han pasado ${c} segundos.`
+                timer.textContent = msg;
+            }, 1000)
+
+    </script>
+</body>
+</html>
