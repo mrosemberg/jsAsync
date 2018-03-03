@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promesas</title>
+</head>
+<body>
+        <h1 id="agenda">Estoy depertando...</h1>
+        <script>
+            const _despertar    = 2000;
+            const _ducha        = 2000;
+            const _vestirse     = 2000;
+            const _desayunar    = 2000;
+            const _trabajar     = 9000;
+    
+            const $agenda       = document.getElementById('agenda');
+
+            const Despertar = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Me estoy duchando...');   
+                }), _despertar;
+            })
+
+            Despertar.then((msg) => {
+                console.log(msg);
+            })
+            .catch((msg) => {
+                console.log(msg);
+            });
+        </script>
+</body>
+</html>
